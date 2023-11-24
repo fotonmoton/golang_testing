@@ -3,8 +3,8 @@ package controllers
 import (
 	"net/http"
 	"strconv"
-	"testing/warehouse"
-	"testing/warehouse/http/views"
+	"testing_go/warehouse"
+	"testing_go/warehouse/http/views"
 )
 
 type WarehouseController struct {
@@ -26,6 +26,12 @@ func (w *WarehouseController) NewProduct(res http.ResponseWriter, req *http.Requ
 func (w *WarehouseController) SubmitProduct(res http.ResponseWriter, req *http.Request) {
 	Qty, _ := strconv.ParseInt(req.PostFormValue("Qty"), 10, 64)
 	Name := req.PostFormValue("Name")
-	w.warehouse.AddProduct(warehouse.NewProduct(Name, int(Qty)))
+	finsh := make(chan bool)
+	go func() {
+		w.warehouse.AddProduct(warehouse.NewProduct(Name, int(Qty)))
+		finsh <- true
+	}()
+
+	<-finsh
 	views.HtmlProducts(res, w.warehouse.ListProducts())
 }

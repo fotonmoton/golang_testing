@@ -2,8 +2,8 @@ package notifications
 
 import (
 	"log"
-	"testing/warehouse"
-	"testing/warehouse/db"
+	"testing_go/warehouse"
+	"testing_go/warehouse/db"
 )
 
 type DatabaseChannel struct {

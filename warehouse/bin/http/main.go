@@ -3,10 +3,10 @@ package main
 import (
 	"log"
 	"net/http"
-	"testing/warehouse"
-	"testing/warehouse/db"
-	"testing/warehouse/http/controllers"
-	"testing/warehouse/notifications"
+	"testing_go/warehouse"
+	"testing_go/warehouse/db"
+	"testing_go/warehouse/http/controllers"
+	"testing_go/warehouse/notifications"
 
 	"github.com/gorilla/mux"
 )

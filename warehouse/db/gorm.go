@@ -2,7 +2,7 @@ package db
 
 import (
 	"log"
-	"testing/warehouse"
+	"testing_go/warehouse"
 
 	nativeMysql "github.com/go-sql-driver/mysql"
 

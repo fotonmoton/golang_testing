@@ -3,7 +3,7 @@ package db
 import (
 	"database/sql"
 	"log"
-	"testing/warehouse"
+	"testing_go/warehouse"
 	"time"
 
 	"github.com/go-sql-driver/mysql"

@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"log"
-	"testing/warehouse"
+	"testing_go/warehouse"
 	"time"
 
 	amqp "github.com/rabbitmq/amqp091-go"

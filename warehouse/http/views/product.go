@@ -3,7 +3,7 @@ package views
 import (
 	"html/template"
 	"io"
-	"testing/warehouse"
+	"testing_go/warehouse"
 )
 
 var productsTemplate = template.Must(template.ParseFiles("../../http/views/products.html"))
